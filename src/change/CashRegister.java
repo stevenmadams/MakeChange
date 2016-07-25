@@ -9,19 +9,17 @@ public class CashRegister {
 
 	public static void main(String[] args) {
 		int option;
-
 		while (true) {
 			System.out.println("-----CASH REGISTER MENU-----");
 			System.out.println("Press 1 for new transaction");
 			System.out.println("Press 2 to close register");
 			System.out.println("----------------------------");
 			option = register.nextInt();
-
 			if (option == 2) {
+				System.out.println("XXXX REGISTER CLOSED XXXXXXX");
 				break;
 			}
 			;
-
 			if (option == 1) {
 				System.out.print("What is the total of the items?\n" + "$");
 				total = register.nextFloat();
@@ -70,9 +68,7 @@ public class CashRegister {
 						System.out.println(fivedollars + " fives");
 					}
 				}
-
 				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500));
-
 				if (change >= 100) {
 					onedollars = change / 100;
 					if (onedollars == 1) {
@@ -81,10 +77,8 @@ public class CashRegister {
 						System.out.println(onedollars + " ones");
 					}
 				}
-
 				change = startchange
 						- ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500) + (onedollars * 100));
-				// here
 				if (change >= 25) {
 					quarters = change / 25;
 					if (quarters == 1) {
@@ -93,10 +87,7 @@ public class CashRegister {
 						System.out.println(quarters + " quarters");
 					}
 				}
-
-				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500)
-						+ (onedollars * 100) + (quarters * 25));
-
+				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500) + (onedollars * 100) + (quarters * 25));
 				if (change >= 10) {
 					dimes = change / 10;
 					if (dimes == 1) {
@@ -105,10 +96,8 @@ public class CashRegister {
 						System.out.println(dimes + " dimes");
 					}
 				}
-
 				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500)
 						+ (onedollars * 100) + (quarters * 25) + (dimes * 10));
-
 				if (change >= 5) {
 					nickels = (change / 5);
 					Math.floor(nickels);
@@ -118,10 +107,7 @@ public class CashRegister {
 						System.out.println(nickels + " nickels");
 					}
 				}
-
-				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500)
-						+ (onedollars * 100) + (quarters * 25) + (dimes * 10) + (nickels * 5));
-
+				change = startchange - ((twentydollars * 2000) + (tendollars * 1000) + (fivedollars * 500) + (onedollars * 100) + (quarters * 25) + (dimes * 10) + (nickels * 5));
 				if (change >= 1) {
 					pennies = change;
 					if (pennies == 1) {
@@ -131,25 +117,12 @@ public class CashRegister {
 					}
 				}
 				System.out.println();
-
 			}
 			;
 			if (option != 1) {
-				System.out.println("Invalid option!");
-
+				System.out.println("!-!-!--Invalid option--!-!-!\n");
 			}
 			;
-
 		}
 	}
 }
-
-// }
-//
-//
-//
-
-//
-
-//
-// }
